@@ -13,9 +13,17 @@ if (exists("data")) {
   print("Error: Unable to load the CSV file.\n")
 }
 
-price_relative <- (data$Open)/(data$Close) #Have to figure out how to subtract 1
+price_relative <- (data$Close)/(data$Open) 
 
-print(price_relative)
+
+simple_daily <- price_relative - 1
+
+compounded_daily <- log(data$Close) - log(data$Open)
+
+#simple_monthly <- 
+
+
+
 
 
 
